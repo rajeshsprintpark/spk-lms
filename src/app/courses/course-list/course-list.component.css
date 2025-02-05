@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Content */
+.hero-content {
+  max-width: 50%;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hero-content li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Right Image */
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Call-to-Action Button */
+.hero-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff5722;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.hero-btn:hover {
+  background: #ff3d00;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

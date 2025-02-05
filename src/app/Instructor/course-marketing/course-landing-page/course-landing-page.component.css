@@ -1,0 +1,101 @@
+.course-upload {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #20c997;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #18a078;
+}
+
+/* Course Preview Section */
+.course-preview {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.banner-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.feature-preview {
+  margin-top: 20px;
+}
+
+.feature-item-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.feature-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.course-preview p {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.course-preview .banner-preview {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}

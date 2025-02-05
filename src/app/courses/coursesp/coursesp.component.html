@@ -1,0 +1,34 @@
+<div class="course-list">
+  <div class="course-card" *ngFor="let course of courses">
+    <div class="image-wrapper">
+      <img [src]="course.image" alt="Course Image" class="course-image" />
+      <div class="popular-badge" *ngIf="course.isPopular">Popular</div>
+    </div>
+
+    <div class="course-content">
+      <div class="course-title-wrapper">
+        <h2 class="course-title">{{ course.title }}</h2>
+        <div class="wishlist" (click)="toggleWishlist(course)">
+          <i [ngClass]="course.isWishlisted ? 'fas fa-heart wishlist-selected' : 'far fa-heart'"></i>
+        </div>
+      </div>
+
+      <p class="course-description">{{ course.description }}</p>
+      <div class="course-rating">
+        <span class="rating-stars">{{ course.rating }} ★</span>
+        <span class="rating-count">({{ course.reviews }})</span>
+      </div>
+      <p class="course-details">{{ course.details }}</p>
+      <div class="course-price">
+        <span class="current-price">₹{{ course.price }}</span>
+        <span class="original-price">₹{{ course.originalPrice }}</span>
+      </div>
+      <div class="footer">
+        <div class="add-to-cart" (click)="addToCart(course)">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </div>
+        <div class="badge" *ngIf="course.isBestseller">Bestseller</div>
+      </div>
+    </div>
+  </div>
+</div>

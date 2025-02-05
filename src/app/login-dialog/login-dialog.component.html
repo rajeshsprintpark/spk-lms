@@ -1,0 +1,85 @@
+<h2 mat-dialog-title class="dialog-header">
+  <div class="header-container">
+    <span>Welcome</span>
+    <button mat-icon-button mat-dialog-close class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</h2>
+
+<mat-dialog-content>
+  <div class="login-dialog-container">
+    <mat-tab-group>
+      <!-- Sign In Tab -->
+      <mat-tab label="Sign In">
+        <div class="tab-content">
+          <div class="form-container">
+            <h3 class="title">Please Login To Continue</h3>
+            <form>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput placeholder="Email or Username" />
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-icon matPrefix>lock</mat-icon>
+                <input matInput type="password" placeholder="Password" />
+              </mat-form-field>
+
+              <div class="actions">
+                <mat-checkbox>Remember me</mat-checkbox>
+                <a href="#" class="forgot-password">Forgot password</a>
+              </div>
+
+              <button mat-raised-button color="primary" class="full-width sign-in-btn">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </mat-tab>
+
+      <!-- Sign Up Tab -->
+      <mat-tab label="Sign Up">
+        <div class="tab-content">
+          <div class="form-container">
+            <h3 class="title">Please Sign Up To Continue</h3>
+            <form>
+              <!-- Full Name and Email on the same row -->
+              <div class="form-row">
+                <mat-form-field appearance="outline" class="half-width">
+                  <mat-icon matPrefix>account_circle</mat-icon>
+                  <input matInput placeholder="Full Name" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="half-width">
+                  <mat-icon matPrefix>email</mat-icon>
+                  <input matInput type="email" placeholder="Email" />
+                </mat-form-field>
+              </div>
+
+              <!-- Password and Confirm Password on the same row -->
+              <div class="form-row">
+                <mat-form-field appearance="outline" class="half-width">
+                  <mat-icon matPrefix>lock</mat-icon>
+                  <input matInput type="password" placeholder="Password" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="half-width">
+                  <mat-icon matPrefix>lock</mat-icon>
+                  <input matInput type="password" placeholder="Confirm Password" />
+                </mat-form-field>
+              </div>
+
+              <div class="terms">
+                <mat-checkbox>
+                  I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
+                </mat-checkbox>
+              </div>
+
+              <button mat-raised-button color="accent" class="full-width sign-up-btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</mat-dialog-content>

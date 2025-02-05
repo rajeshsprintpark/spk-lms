@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 class="text-3xl font-bold mb-4 text-center">Available Courses</h2>
+  <div class="grid">
+    <div *ngFor="let course of courses" class="card">
+      <!-- Course Image -->
+      <img [src]="course.imageUrl" [alt]="course.title">
+
+      <!-- Course Details -->
+      <h3>{{ courses.title }}</h3>
+      <p>{{ course.description }}</p>
+      <p class="text-lg font-bold text-blue-500">
+        ₹{{ course.price }} <del class="text-gray-500 text-sm">₹{{ course.originalPrice }}</del>
+      </p>
+      <p class="text-yellow-500 font-semibold mb-2">⭐ {{ course.rating }} ({{ course.reviews }} Reviews)</p>
+
+      <!-- Button -->
+      <button
+        [routerLink]="['/courses', course.id]"
+        class="card-btn">
+        View Details
+      </button>
+    </div>
+  </div>    
+</div>
