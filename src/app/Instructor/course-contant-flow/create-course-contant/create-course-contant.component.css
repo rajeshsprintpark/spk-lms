@@ -1,0 +1,88 @@
+.curriculum-builder {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.section-header,
+.lecture-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+button[title="Reorder Section"],
+button[title="Reorder Lecture"] {
+    background-color: #03dac6;
+    cursor: grab;
+}
+
+button[title="Reorder Section"]:hover,
+button[title="Reorder Lecture"]:hover {
+    background-color: #018786;
+}
+
+.add-section,
+.add-lecture {
+    background-color: #03dac6;
+}
+
+.add-section:hover,
+.add-lecture:hover {
+    background-color: #018786;
+}
+
+.video-upload,
+.article-editor {
+    margin-top: 10px;
+}
+
+.video-upload input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    resize: vertical;
+}

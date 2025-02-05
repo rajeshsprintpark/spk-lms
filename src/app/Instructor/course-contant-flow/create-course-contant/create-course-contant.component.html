@@ -1,0 +1,45 @@
+<div class="curriculum-builder">
+    <h1>Curriculum</h1>
+
+    <div *ngFor="let section of sections; let sectionIndex = index" class="section">
+        <!-- Section Header -->
+        <div class="section-header">
+            <input [(ngModel)]="section.title" class="section-title" placeholder="Enter section name" />
+            <button (click)="removeSection(sectionIndex)" title="Remove Section">✖</button>
+            <button title="Reorder Section" draggable="true" (dragstart)="moveSection(sectionIndex, sectionIndex - 1)"
+                (dragend)="moveSection(sectionIndex, sectionIndex + 1)">
+                ☰
+            </button>
+        </div>
+
+        <!-- Lectures -->
+        <div *ngFor="let lecture of section.lectures; let lectureIndex = index" class="lecture">
+            <div class="lecture-header">
+                <input [(ngModel)]="lecture.title" class="lecture-title" placeholder="Enter lecture name" />
+                <div class="btn" (click)="openVideoUpload(sectionIndex, lectureIndex)">🎥 Video</div>
+                <div class="btn" (click)="openArticleEditor(sectionIndex, lectureIndex)">📄 Article</div>
+                <br>
+                <div *ngIf="lecture.isVideo" class="video-upload">
+                    <input type="file" (change)="onVideoUpload($event, sectionIndex, lectureIndex)" />
+                    <button (click)="uploadVideo(sectionIndex, lectureIndex)">Upload Video</button>
+                </div>
+                <div *ngIf="lecture.isArticle" class="article-editor">
+                    <textarea [(ngModel)]="lecture.articleContent" placeholder="Write your article here..."></textarea>
+                    <button (click)="saveArticle(sectionIndex, lectureIndex)">Save Article</button>
+                </div>
+                <button (click)="removeLecture(sectionIndex, lectureIndex)" title="Remove Lecture">
+                    ✖
+                </button>
+                <button title="Reorder Lecture" draggable="true"
+                    (dragstart)="moveLecture(sectionIndex, lectureIndex, lectureIndex - 1)"
+                    (dragend)="moveLecture(sectionIndex, lectureIndex, lectureIndex + 1)">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <button class="add-lecture" (click)="addLecture(sectionIndex)">+ Add Lecture</button>
+    </div>
+
+    <button class="add-section" (click)="addSection()">+ Add Section</button>
+</div>
