@@ -1,0 +1,160 @@
+::ng-deep .mat-dialog-container {
+  max-height: 80vh;
+  overflow: hidden !important;
+  position: relative;
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Light pastel blue */
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e8f5e9; /* Light pastel green */
+  border-bottom: 1px solid #b0bec5; /* Subtle gray for the border */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dialog-header .close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dialog-header .close-button mat-icon {
+  font-size: 20px;
+  color: #888; /* Soft gray for the close button */
+}
+
+.login-dialog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 350px;
+}
+
+.form-container {
+  border: 1px solid #b0bec5; /* Subtle border to match theme */
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff; /* White background for the form */
+  width: 100%;
+}
+
+h3.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+  color: #4caf50; /* Pastel green title */
+}
+
+mat-form-field {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+mat-form-field input {
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #f3f4f7; /* Light pastel background for input fields */
+  border: 1px solid #b0bec5; /* Light border */
+  border-radius: 4px;
+}
+
+mat-raised-button {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 100%;
+}
+
+mat-raised-button.color-primary {
+  background-color: #a5d6a7; /* Light pastel green for the primary button */
+  color: white;
+}
+
+mat-raised-button.color-accent {
+  background-color: #ff80ab; /* Light pastel pink for accent button */
+  color: white;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms {
+  margin: 12px 0;
+  font-size: 12px;
+  color: #757575; /* Subtle gray for terms text */
+}
+
+mat-checkbox {
+  font-size: 12px;
+  color: #80cbc4; /* Soft pastel teal for checkboxes */
+}
+
+.forgot-password {
+  font-size: 10px;
+  text-decoration: underline;
+  color: #3f51b5; /* Subtle blue for the forgot password link */
+}
+
+.forgot-password:hover {
+  color: #ff80ab; /* Change to pastel pink on hover */
+}
+
+/* Styling for Tabs to make them equal height */
+::ng-deep .mat-tab-group {
+  display: flex;
+  flex-direction: column;
+}
+
+::ng-deep .mat-tab-body-wrapper {
+  padding: 0;
+}
+
+::ng-deep .mat-tab-body {
+  height: 100%;
+}
+
+/* Ensuring both Sign In and Sign Up sections are the same size */
+::ng-deep .mat-tab-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Layout for Full Name, Email, Password, and Confirm Password */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px; /* Space between fields in each row */
+}
+
+.half-width {
+  width: 45% !important; /* Adjusted to 45% for a balanced form layout */
+}

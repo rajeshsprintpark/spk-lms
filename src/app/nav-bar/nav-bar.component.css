@@ -1,0 +1,153 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #b1ddc9;
+  color: #555;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar-left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  text-decoration: none;
+}
+
+/* Fix Logo Size */
+.logo-img {
+  height: 50px; /* Adjusted height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 120px; /* Prevents excessive size */
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+.categories-link {
+  font-size: 16px;
+  color: #555;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.categories-link:hover {
+  color: #4c8bf5;
+}
+
+/* Search bar */
+.search-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 400px; /* Prevents excessive stretching */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  width: 100%; /* Ensure it stays within the max-width */
+}
+
+.search-container i {
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.search-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Navbar-right */
+.navbar-right ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right ul li {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right ul li a {
+  color: #555;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-right ul li a:hover {
+  color: #4c8bf5;
+}
+
+/* Circular Icons */
+.icon-circle {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Language Dropdown */
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-left, .navbar-center, .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-right ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  /* Reduce logo size for smaller screens */
+  .logo-img {
+    height: 40px;
+    max-width: 100px;
+  }
+
+  /* Make search bar smaller */
+  .search-form {
+    max-width: 300px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+}

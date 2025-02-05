@@ -1,0 +1,77 @@
+/* General Footer Styles */
+.footer {
+    background-color: #f4f6f9; /* Light pastel background */
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .footer-column {
+    width: 23%;
+  }
+  
+  .footer-column h4 {
+    color: #4f5b66; /* Slightly darker pastel for text */
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #7f8c8d; /* Pastel grey text */
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #3498db; /* Blue on hover */
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-media li {
+    margin-bottom: 8px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    color: #7f8c8d;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #3498db;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f4f6; /* Lighter pastel */
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
